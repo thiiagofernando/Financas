@@ -11,7 +11,7 @@ namespace Financas.Controllers
     public class UsuarioController : Controller
     {
         private UsuarioDAO usuarioDAO;
-        public UsuarioController(UsuarioDAO usuarioDao)
+        public UsuarioController(UsuarioDAO usuarioDAO)
         {
             this.usuarioDAO = usuarioDAO;
         }
