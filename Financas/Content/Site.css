@@ -1,0 +1,26 @@
+﻿input {
+    margin: 0.5em;
+}
+ input[type=subimit] {
+     background-color: rgb(66, 139, 202);
+     border: 0;
+     padding: .5em;
+     color: white;
+ }
+
+ select {
+     margin: 0.5em 0.5em 0;
+     padding: .5em;
+     width: 100%;
+     display: block;
+     color: red;
+ }
+
+ .input-validation-error {
+     background-color: #ffd6d6;
+ }
+
+ aside ul {
+     list-style-type: none;
+     margin: .5em 1em;
+ }
