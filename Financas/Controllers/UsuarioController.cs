@@ -26,7 +26,7 @@ namespace Financas.Controllers
             if (ModelState.IsValid)
             {
                 usuarioDAO.Adiciona(usuario);
-                return RedirectToAction("Index");
+                return RedirectToAction("Form");
             }
             else
             {
