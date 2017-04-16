@@ -7,18 +7,18 @@
     @Html.ValidationMessageFor(m => m.Valor)
     <br/>
 
-    @Html.LabelFor(m => m.UsuarioId, "Usuario")
+    @Html.LabelFor(m => m.UsuarioId, "Usuario:")
     @Html.DropDownListFor(m => m.UsuarioId,
         new SelectList(ViewBag.Usuarios, "Id", "Nome"),
         new {@class="form-control"})
 
     @Html.ValidationMessageFor(m => m.UsuarioId)
     <br />
-    @Html.LabelFor(m=> m.Tipo, "Tipo")
+    @Html.LabelFor(m=> m.Tipo, "Tipo:")
     @Html.EnumDropDownListFor(m => m.Tipo, new {@class= "form-control"})
     @Html.ValidationMessageFor(m => m.Tipo)
     <br />
-    @Html.LabelFor(m=> m.Data,  "Data")
+    @Html.LabelFor(m=> m.Data,  "Data:")
     @Html.TextBoxFor(m=> m.Data, new {@class="form-control"})
     @Html.ValidationMessageFor(m=> m.Data)
     <br/>

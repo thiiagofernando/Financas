@@ -12,6 +12,7 @@ namespace Financas.DAO
         public MovimentacaoDAO(FinancasContext context)
         {
             this.context = context;
+            
         }
 
         public void Adiciona(Movimentacao movimentacao)

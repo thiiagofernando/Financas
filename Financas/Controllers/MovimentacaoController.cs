@@ -43,7 +43,7 @@ namespace Financas.Controllers
         public ActionResult Index()
         {
             IList<Movimentacao> movimentacoes = movimentacaoDAO.Lista();
-            return View();
+            return View(movimentacoes);
         }
     }
 }
