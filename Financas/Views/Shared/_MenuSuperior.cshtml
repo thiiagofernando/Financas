@@ -1,9 +1,25 @@
 ﻿<nav>
     <div class="container-fluid">
         <ul class="nav nav-tabs">
+         @if (User.Identity.IsAuthenticated)
+         {
             <li>@Html.ActionLink("Home", "Index", "Home")</li>
             <li>@Html.ActionLink("Usuario", "Index", "Usuario")</li>
             <li>@Html.ActionLink("Movimentacoes", "Index", "Movimentacao")</li>
+         }
+
+
+            @if (User.Identity.IsAuthenticated)
+            {
+                <li>@Html.ActionLink("Logoff", "Logout", "Login")</li>
+            }
+            else
+            {
+                <li>@Html.ActionLink("Login", "Index", "Login")</li>
+                
+            }
+            
+            
         </ul> 
     </div>
 </nav>

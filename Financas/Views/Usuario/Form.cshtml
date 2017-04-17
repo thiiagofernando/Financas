@@ -1,7 +1,8 @@
-﻿@model Financas.Entidades.Usuario
+﻿@model Financas.Models.UsuarioModel
     
 @using (Html.BeginForm("Adiciona","Usuario", FormMethod.Post, new {@class= ""}))
 {
+  @Html.ValidationMessage("usuario.Invalido")
   @Html.LabelFor(u => u.Nome, "Nome: " )
   @Html.TextBoxFor(u => u.Nome, new {@class = "form-control"})
   @Html.ValidationMessageFor(u => u.Nome)
@@ -10,7 +11,14 @@
   @Html.TextBoxFor(u => u.Email, new { @class = "form-control" })
   @Html.ValidationMessageFor(u => u.Email)
 
-        <br />
-
-        <input type="submit" value="Enviar" class="btn btn-primary" />
-        }
+<br />
+ @Html.LabelFor(u => u.Senha, "Senha:")
+ @Html.PasswordFor(u => u.Senha, new { @class = "form-control" })
+ @Html.ValidationMessageFor(u => u.Senha)
+<br />
+@Html.LabelFor(u => u.ConfirmacaoSenha, "Confirme Sua Senha:")
+@Html.PasswordFor(u => u.ConfirmacaoSenha, new { @class = "form-control" })
+@Html.ValidationMessageFor(u => u.ConfirmacaoSenha)
+<br />
+ <input type="submit" value="Enviar" class="btn btn-primary" />
+}
