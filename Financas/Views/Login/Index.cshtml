@@ -1,4 +1,7 @@
-﻿<form action="@Url.Action("Autentica")" method="post">
+﻿@{
+    ViewBag.Title = "Login";
+}
+<form action="@Url.Action("Autentica")" method="post">
     @Html.ValidationMessage("login.Invalido","", new { @class = "text-danger" })
     <br />
     <label for="login">Login</label>

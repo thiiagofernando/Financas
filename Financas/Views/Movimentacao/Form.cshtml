@@ -1,5 +1,7 @@
 ﻿@model Financas.Entidades.Movimentacao
-    
+@{
+    ViewBag.Title = "Nova Movimentação";
+}    
 @using (Html.BeginForm("Adiciona", "Movimentacao", FormMethod.Post))
 {
     @Html.LabelFor(m => m.Valor, "Valor:")
